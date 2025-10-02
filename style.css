@@ -1,76 +1,69 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* Reset */
+body, html {
   margin: 0;
   padding: 0;
-}
-
-header {
-  background-color: #1a1a1a;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   color: white;
+  overflow-x: hidden;
+  background: #000; /* fallback */
+}
+
+/* === STAR BACKGROUND === */
+.stars, .twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.stars {
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+}
+
+.twinkling {
+  background: url('https://www.transparenttextures.com/patterns/tiny-crosses.png') repeat;
+  animation: moveBackground 200s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes moveBackground {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+/* === HEADER === */
+header {
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.6);
+  border-bottom: 2px solid rgba(255,255,255,0.1);
 }
 
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-.intro-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.profile-picture img {
-  width: 200px;
-  border-radius: 10px;
-}
-
-.intro-text h2 {
-  margin-top: 0;
-}
-
-.section {
-  margin-bottom: 40px;
-}
-
-.section h2 {
+header h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-footer {
+header .subtitle {
+  font-size: 1.2rem;
+  color: #aad4ff;
+  font-style: italic;
+}
+
+/* === MAIN === */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
   text-align: center;
-  padding: 20px 0;
-  background-color: #f4f4f4;
-  margin-top: 40px;
 }
 
-footer a {
-  text-decoration: none;
-  color: #333;
-}
-
-.back-top-left {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: #1a1a1a;
-  color: white;
-  padding: 8px 12px;
-  text-decoration: none;
-  border-radius: 5px;
-  z-index: 1000; /* ensures it stays on top */
-}
-
-.back-top-left:hover {
-  background-color: #333;
-}
-
-/* === BIG BUTTONS FOR HOMEPAGE === */
+/* === BUTTON GRID === */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -80,7 +73,7 @@ footer a {
 
 .big-button {
   display: block;
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  background: linear-gradient(135deg, #1a237e, #0d47a1);
   color: white;
   text-align: center;
   padding: 20px;
@@ -88,12 +81,47 @@ footer a {
   font-weight: bold;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
   transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .big-button:hover {
-  background: linear-gradient(135deg, #333, #555);
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0,0,0,0.6);
+  border-top: 2px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #aad4ff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === BACK BUTTON === */
+.back-top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.back-top-left:hover {
+  background-color: #333;
 }
