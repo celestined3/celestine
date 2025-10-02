@@ -5,13 +5,12 @@ body, html {
   height: 100%;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: white;
+  color: #222;
+  background: #fff; /* clean white background */
   overflow-x: hidden;
-  background: linear-gradient(135deg, #2e003e, #4b0082, #6a0dad);
-  background-attachment: fixed;
 }
 
-/* === STAR BACKGROUND (subtle texture) === */
+/* === Subtle STAR BACKGROUND (very light effect) === */
 .stars, .twinkling {
   position: fixed;
   top: 0;
@@ -24,13 +23,13 @@ body, html {
 
 .stars {
   background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  opacity: 0.3;
+  opacity: 0.08; /* very subtle */
 }
 
 .twinkling {
   background: url('https://www.transparenttextures.com/patterns/tiny-crosses.png') repeat;
   animation: moveBackground 200s linear infinite;
-  opacity: 0.15;
+  opacity: 0.05;
 }
 
 @keyframes moveBackground {
@@ -41,19 +40,20 @@ body, html {
 /* === HEADER === */
 header {
   text-align: center;
-  padding: 50px 20px;
-  background: rgba(46, 0, 62, 0.7);
-  border-bottom: 2px solid rgba(255,255,255,0.1);
+  padding: 40px 20px;
+  background: #f8f6ff; /* soft off-white with a hint of purple */
+  border-bottom: 2px solid #e0d7f7;
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #2e003e;
 }
 
 header .subtitle {
   font-size: 1.2rem;
-  color: #d8b4fe;
+  color: #6a0dad;
   font-style: italic;
 }
 
@@ -73,6 +73,7 @@ main {
   margin-top: 40px;
 }
 
+/* KEEPING YOUR BUTTONS AS IS */
 .big-button {
   display: block;
   background: linear-gradient(135deg, #5e35b1, #7b1fa2);
@@ -97,14 +98,15 @@ main {
 footer {
   text-align: center;
   padding: 20px 0;
-  background: rgba(46, 0, 62, 0.7);
-  border-top: 2px solid rgba(255,255,255,0.1);
+  background: #f8f6ff;
+  border-top: 2px solid #e0d7f7;
   margin-top: 40px;
+  color: #333;
 }
 
 footer a {
   text-decoration: none;
-  color: #d8b4fe;
+  color: #6a0dad;
 }
 
 footer a:hover {
@@ -116,7 +118,7 @@ footer a:hover {
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: #4b0082;
+  background-color: #6a0dad;
   color: white;
   padding: 8px 12px;
   text-decoration: none;
@@ -125,5 +127,5 @@ footer a:hover {
 }
 
 .back-top-left:hover {
-  background-color: #6a0dad;
+  background-color: #9c27b0;
 }
