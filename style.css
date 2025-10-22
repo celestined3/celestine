@@ -10,7 +10,7 @@ body, html {
   overflow-x: hidden;
 }
 
-/* === BACKGROUND === */
+/* === BACKGROUND (subtle, professional) === */
 .stars, .twinkling {
   position: fixed;
   top: 0;
@@ -57,46 +57,83 @@ header .subtitle {
   font-style: italic;
 }
 
-/* === MAIN === */
+/* === MAIN LAYOUT === */
 main {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
+}
+
+/* Paragraphs and text sections left-aligned for readability */
+main p, 
+main ul, 
+main ol, 
+main div.text-section {
+  text-align: left;
+}
+
+/* === HOMEPAGE BUTTON GRID === */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
   text-align: center;
 }
 
-/* === GRID BUTTONS === */
-.button-grid, .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 40px;
-}
-
-/* === UNIVERSAL BUTTON STYLE === */
-.big-button, .project-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+/* === HOMEPAGE BIG BUTTONS === */
+.big-button {
+  display: block;
   background: linear-gradient(135deg, #5e35b1, #7b1fa2);
   color: white;
-  text-decoration: none;
-  border-radius: 14px;
+  text-align: center;
   padding: 20px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 14px;
+  text-decoration: none;
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
   transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.big-button:hover, .project-button:hover {
+.big-button:hover {
   background: linear-gradient(135deg, #7e57c2, #9c27b0);
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.5);
 }
 
-/* === IMAGES IN PROJECT BUTTONS === */
+/* === PROJECTS PAGE GRID === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.project-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(135deg, #5e35b1, #7b1fa2);
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  padding: 15px 20px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-button:hover {
+  background: linear-gradient(135deg, #7e57c2, #9c27b0);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+}
+
 .project-thumb {
   width: 50px;
   height: 50px;
@@ -124,19 +161,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* === BACK BUTTONS === */
+/* === BACK BUTTON (for all non-home pages) === */
 .back-top-left {
   position: fixed;
   top: 20px;
   left: 20px;
   background-color: #6a0dad;
   color: white;
-  padding: 10px 14px;
+  padding: 8px 12px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 5px;
   z-index: 1000;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .back-top-left:hover {
