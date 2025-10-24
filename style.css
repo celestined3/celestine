@@ -1,4 +1,4 @@
-/* === RESET & BASE === */
+/* Reset */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,11 +6,11 @@ body, html {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #222;
-  background: #fff;
+  background: #fff; /* clean white background */
   overflow-x: hidden;
 }
 
-/* === BACKGROUND (subtle, professional) === */
+/* === Subtle STAR BACKGROUND (very light effect) === */
 .stars, .twinkling {
   position: fixed;
   top: 0;
@@ -23,7 +23,7 @@ body, html {
 
 .stars {
   background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  opacity: 0.08;
+  opacity: 0.08; /* very subtle */
 }
 
 .twinkling {
@@ -39,16 +39,16 @@ body, html {
 
 /* === HEADER === */
 header {
-  background: #f8f6ff;
-  color: #2e003e;
   text-align: center;
   padding: 40px 20px;
+  background: #f8f6ff; /* soft off-white with a hint of purple */
   border-bottom: 2px solid #e0d7f7;
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #2e003e;
 }
 
 header .subtitle {
@@ -57,24 +57,23 @@ header .subtitle {
   font-style: italic;
 }
 
-/* === MAIN LAYOUT === */
+/* === MAIN === */
 main {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
-  text-align: left; /* makes paragraphs align normally */
+  text-align: center;
 }
 
-/* === HOMEPAGE BUTTON GRID === */
+/* === BUTTON GRID === */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 40px;
-  text-align: center;
 }
 
-/* === HOMEPAGE BIG BUTTONS === */
+/* KEEPING YOUR BUTTONS AS IS */
 .big-button {
   display: block;
   background: linear-gradient(135deg, #5e35b1, #7b1fa2);
@@ -90,37 +89,6 @@ main {
 }
 
 .big-button:hover {
-  background: linear-gradient(135deg, #7e57c2, #9c27b0);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
-}
-
-/* === PROJECT PAGE GRID === */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-/* === PROJECT BUTTONS === */
-.project-button {
-  display: block;
-  background: linear-gradient(135deg, #5e35b1, #7b1fa2);
-  color: white;
-  text-align: center;
-  padding: 18px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 14px;
-  text-decoration: none;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-  transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-button:hover {
   background: linear-gradient(135deg, #7e57c2, #9c27b0);
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.5);
@@ -145,38 +113,19 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* === BACK BUTTONS === */
+/* === BACK BUTTON (if needed) === */
 .back-top-left {
   position: fixed;
   top: 20px;
   left: 20px;
   background-color: #6a0dad;
   color: white;
-  padding: 8px 14px;
+  padding: 8px 12px;
   text-decoration: none;
   border-radius: 5px;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-weight: bold;
 }
 
 .back-top-left:hover {
-  background-color: #9c27b0;
-}
-
-.back-bottom {
-  display: inline-block;
-  margin-top: 40px;
-  background-color: #6a0dad;
-  color: white;
-  padding: 10px 16px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.back-bottom:hover {
   background-color: #9c27b0;
 }
