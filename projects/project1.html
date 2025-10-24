@@ -5,10 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foldable Horn Antenna For A Radio Telescope</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    /* PDF button container */
+    .pdf-button {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 10px;
+    }
+
+    .pdf-button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .pdf-preview {
+      width: 60px;
+      height: 80px;
+      background-color: white;
+      border-radius: 6px;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .pdf-text {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
-
+  <!-- Fixed Back Button -->
   <a href="../projects.html" class="back-top-left">← Back</a>
+
   <header>
     <h1>Foldable Horn Antenna For A Radio Telescope</h1>
   </header>
@@ -21,21 +58,19 @@
       <p>During the report write up, I had the privilege to present this project to my professors, friends and industry experts - a great networking event at The University of Manchester.</p>
       
       <h2>Media & Files</h2>
-      <img src="../images/project1.png" alt="Horn Antenna" style="max-width:100%; height:auto;">
-      <!-- For a YouTube video, use this format -->
-      <!--
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" 
-              title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-      -->
-      <p>
-        <a href="../docs/Dissertation.pdf" target="_blank">📄 Dissertation</a>
-      </p>
+      <img src="../images/project1.png" alt="Horn Antenna" style="max-width:100%; height:auto; border-radius: 10px;">
+
+      <!-- PDF Button with Preview -->
+      <a href="../docs/project1.pdf" target="_blank" class="pdf-button">
+        <img src="../images/project1-preview.png" alt="PDF Preview" class="pdf-preview">
+        <span class="pdf-text">View Full Report (PDF)</span>
+      </a>
     </section>
   </main>
 
   <footer>
     <p>
-      <a href="../projects.html">Back to Projects</a> | 
+      <a href="../projects.html">← Back</a> | 
       <a href="../index.html">Back to Home</a>
     </p>
   </footer>
