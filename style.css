@@ -79,23 +79,23 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 80px; /* reduced height for rectangular look */
+  height: 60px; /* smaller height */
   background: linear-gradient(135deg, #5e35b1, #7b1fa2);
   color: white;
   text-decoration: none;
-  border-radius: 14px;
-  padding: 15px 20px;
-  font-size: 1.2rem;
+  border-radius: 12px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
   font-weight: bold;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
   transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
   line-height: 1.2;
 }
 
 .big-button:hover {
   background: linear-gradient(135deg, #7e57c2, #9c27b0);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 /* === PROJECT BUTTONS (with image) === */
