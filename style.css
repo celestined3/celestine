@@ -75,20 +75,21 @@ main {
 
 /* === HOMEPAGE BIG BUTTONS === */
 .big-button {
-  display: flex;
-  justify-content: center;   /* horizontal centering */
-  align-items: center;       /* vertical centering */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 120px; /* ensures symmetry and consistent centering */
   background: linear-gradient(135deg, #5e35b1, #7b1fa2);
   color: white;
   text-decoration: none;
   border-radius: 14px;
-  padding: 30px;
-  font-size: 1.4rem;
+  padding: 20px;
+  font-size: 1.3rem;
   font-weight: bold;
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
   transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  height: 100px; /* keeps a nice consistent shape */
+  line-height: 1.2;
 }
 
 .big-button:hover {
@@ -97,7 +98,7 @@ main {
   box-shadow: 0 12px 24px rgba(0,0,0,0.5);
 }
 
-/* === PROJECT BUTTONS (unchanged) === */
+/* === PROJECT BUTTONS (with image) === */
 .project-button {
   display: flex;
   align-items: center;
