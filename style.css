@@ -76,7 +76,8 @@ main {
 /* === HOMEPAGE & PROJECT BUTTONS === */
 .big-button, .project-button {
   display: flex;
-  align-items: center;
+  justify-content: center; /* centers text horizontally */
+  align-items: center;     /* centers text vertically */
   gap: 15px;
   background: linear-gradient(135deg, #5e35b1, #7b1fa2);
   color: white;
@@ -87,6 +88,7 @@ main {
   font-weight: bold;
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
   transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .big-button:hover, .project-button:hover {
