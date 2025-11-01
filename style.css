@@ -173,3 +173,53 @@ footer a:hover {
 .back-top-left:hover {
   background-color: #9c27b0;
 }
+
+/* === PROJECT HEADER WITH TOP-RIGHT SKILLS LIST === */
+.project-header {
+  position: relative;
+  background: #f8f6ff;
+  color: #2e003e;
+  padding: 40px 20px;
+  border-bottom: 2px solid #e0d7f7;
+}
+
+.project-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  max-width: 70%;
+}
+
+/* Skills box anchored in top-right corner */
+.skills-list {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  background: #f0e9ff;
+  border: 1px solid #d4c5f9;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #2e003e;
+  font-size: 0.95rem;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.skills-list h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #6a0dad;
+  border-bottom: 1px solid #d4c5f9;
+  padding-bottom: 4px;
+}
+
+.skills-list ul {
+  list-style-type: none;
+  padding: 6px 0 0 0;
+  margin: 0;
+}
+
+.skills-list li {
+  padding: 3px 0;
+}
